@@ -10,8 +10,6 @@ import {
   ClerkProvider,
   SignedIn,
   SignedOut,
-  UserButton,
-  useUser,
   RedirectToSignIn,
 } from "@clerk/clerk-react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -34,7 +32,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/quizes" element={<Quizes />} />
         <Route path="/questions/:category" element={<Questions />} />
-        <Route path="/scoreboard" element={<ScoreBoard />} />
+        <Route path="/scoreboard" element={<ScoreBoard  />} />
       </Routes>
       <Footer />
     </BrowserRouter>

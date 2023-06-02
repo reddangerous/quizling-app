@@ -11,7 +11,7 @@ const Questions = () => {
   const [timeRemaining, setTimeRemaining] = useState(120); // 2 minutes in seconds
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const url = `https://opentdb.com/api.php?amount=20&category=${encodeURIComponent(category)}`;
+  const url = `https://opentdb.com/api.php?amount=2&category=${encodeURIComponent(category)}`;
 
   const timerRef = useRef(null);
 
@@ -82,10 +82,10 @@ const Questions = () => {
       }
     });
     setScore(newScore);
-   //navigate(`/scoreboard/${newScore}`);
+  //  navigate(`/scoreboard/${newScore}`);
     navigate({
   pathname: '/scoreboard',
-  search: `?category=${encodeURIComponent(selectedCategory)}&score=${encodeURIComponent(score)}`,
+  search: `?category=${selectedCategory}&score=${newScore}`,
 });
 
   };
